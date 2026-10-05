@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>
+Wedding Decoration - Shri Jagadamba
+</title>
+
+
+<style>
+
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7f7f7;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+
+    background:
+    linear-gradient(
+        135deg,
+        #8e0000,
+        #d4af37
+    );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px 15px;
+}
+
+header h1 {
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+header p {
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-button {
+
+    display: inline-block;
+
+    margin: 20px;
+
+    padding: 10px 20px;
+
+    background: #8e0000;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.back-button:hover {
+
+    background: #c00000;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.page-title {
+
+    text-align: center;
+
+    margin: 10px 0 30px;
+}
+
+.page-title h2 {
+
+    color: #8e0000;
+
+    font-size: 28px;
+}
+
+.page-title p {
+
+    color: #666;
+
+    margin-top: 8px;
+}
+
+
+/* =========================
+   SUB HEADING
+========================= */
+
+.section-title {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 40px auto 25px;
+
+    text-align: center;
+
+    position: relative;
+}
+
+.section-title h2 {
+
+    display: inline-block;
+
+    background:
+    linear-gradient(
+        135deg,
+        #8e0000,
+        #d4af37
+    );
+
+    color: white;
+
+    padding: 12px 30px;
+
+    border-radius: 30px;
+
+    font-size: 24px;
+
+    box-shadow:
+    0 5px 15px
+    rgba(0,0,0,0.20);
+}
+
+.section-title p {
+
+    margin-top: 8px;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+
+    padding-bottom: 30px;
+}
+
+
+/* =========================
+   PHOTO CARD
+========================= */
+
+.photo-card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+    0 5px 18px
+    rgba(0,0,0,0.15);
+
+    transition: 0.3s;
+}
+
+.photo-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+    0 10px 25px
+    rgba(0,0,0,0.25);
+}
+
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo-card img {
+
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    display: block;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.photo-card img:hover {
+
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   PHOTO INFORMATION
+========================= */
+
+.photo-info {
+
+    text-align: center;
+
+    padding: 15px;
+}
+
+.photo-info h3 {
+
+    color: #8e0000;
+
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+.photo-info p {
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.button-group {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    margin-top: 10px;
+}
+
+
+.contact-button {
+
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    background: #d4af37;
+
+    color: #000;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+
+    background: #b8941f;
+
+    transform: scale(1.05);
+}
+
+
+.whatsapp-button {
+
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    background: #25D366;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.whatsapp-button:hover {
+
+    background: #128C7E;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   FULL SCREEN PHOTO
+========================= */
+
+.photo-viewer {
+
+    display: none;
+
+    position: fixed;
+
+    z-index: 9999;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background:
+    rgba(0,0,0,0.95);
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* FULL SCREEN IMAGE */
+
+.photo-viewer img {
+
+    max-width: 95%;
+
+    max-height: 90%;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+
+    box-shadow:
+    0 0 30px
+    rgba(255,255,255,0.30);
+
+    transition: 0.3s;
+}
+
+
+/* CLOSE BUTTON */
+
+.close-viewer {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 25px;
+
+    color: white;
+
+    font-size: 48px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    z-index: 10000;
+}
+
+.close-viewer:hover {
+
+    color: #d4af37;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #8e0000;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 30px;
+}
+
+footer h3 {
+
+    margin-bottom: 8px;
+}
+
+footer p {
+
+    margin: 5px 0;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px) {
+
+    header h1 {
+
+        font-size: 22px;
+    }
+
+    header p {
+
+        font-size: 14px;
+    }
+
+    .gallery {
+
+        width: 94%;
+
+        grid-template-columns:
+        repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .photo-card img {
+
+        height: 180px;
+    }
+
+    .photo-info {
+
+        padding: 10px;
+    }
+
+    .photo-info h3 {
+
+        font-size: 15px;
+    }
+
+    .photo-info p {
+
+        font-size: 12px;
+    }
+
+    .contact-button,
+    .whatsapp-button {
+
+        padding: 7px 9px;
+
+        font-size: 12px;
+    }
+
+    .section-title h2 {
+
+        font-size: 18px;
+
+        padding: 10px 20px;
+    }
+
+    .close-viewer {
+
+        top: 5px;
+
+        right: 15px;
+
+        font-size: 40px;
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media(max-width:380px) {
+
+    .gallery {
+
+        grid-template-columns: 1fr;
+    }
+
+    .photo-card img {
+
+        height: 230px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <h1>
+        🌸 श्री जगदंबा फुल भंडार व इव्हेंट डेकोरेशन 🌸
+    </h1>
+
+    <p>
+        Chhatrapati Sambhajinagar
+    </p>
+
+</header>
+
+
+<!-- =========================
+     BACK BUTTON
+========================= -->
+
+<a href="index.html"
+   class="back-button">
+
+    ← Back
+
+</a>
+
+
+<!-- =========================
+     PAGE TITLE
+========================= -->
+
+<div class="page-title">
+
+    <h2>
+        💍 Wedding Decoration
+    </h2>
+
+    <p>
+        Our Beautiful Wedding Decoration Designs
+    </p>
+
+</div>
+
+
+
+<!-- ==================================================
+     PHOTO 1 TO 4
+================================================== -->
+
+<div class="gallery">
+
+
+<!-- PHOTO 1 -->
+
+<div class="photo-card">
+
+    <img
+        src="wedding jpg1.jpg"
+        alt="Wedding Decoration 1"
+    >
+
+    <div class="photo-info">
+
+        <h3>Wedding Decoration 01</h3>
+
+        <p>Beautiful Wedding Decoration</p>
+
+        <div class="button-group">
+
+            <a href="tel:8806298182"
+               class="contact-button">
+                📞 Call
+            </a>
+
+            <a
+              href="https://wa.me/918806298182?text=I%20want%20to%20book%20Wedding%20Decoration%2001"
+              class="whatsapp-button">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 2 -->
+
+<div class="photo-card">
+
+    <img
+        src="wedding jpg2.jpg"
+        alt="Wedding Decoration 2"
+    >
+
+    <div class="photo-info">
+
+        <h3>Wedding Decoration 02</h3>
+
+        <p>Beautiful Wedding Decoration</p>
+
+        <div class="button-group">
+
+            <a href="tel:8806298182"
+               class="contact-button">
+                📞 Call
+            </a>
+
+            <a
+              href="https://wa.me/918806298182?text=I%20want%20to%20book%20Wedding%20Decoration%2002"
+              class="whatsapp-button">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 3 -->
+
+<div class="photo-card">
+
+    <img
+        src="wedding jpg3.jpg"
+        alt="Wedding Decoration 3"
+    >
+
+    <div class="photo-info">
+
+        <h3>Wedding Decoration 03</h3>
+
+        <p>Beautiful Wedding Decoration</p>
+
+        <div class="button-group">
+
+            <a href="tel:8806298182"
+               class="contact-button">
+                📞 Call
+            </a>
+
+            <a
+              href="https://wa.me/918806298182?text=I%20want%20to%20book%20Wedding%20Decoration%2003"
+              class="whatsapp-button">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 4 -->
+
+<div class="photo-card">
+
+    <img
+        src="wedding jpg4.jpg"
+        alt="Wedding Decoration 4"
+    >
+
+    <div class="photo-info">
+
+        <h3>Wedding Decoration 04</h3>
+
+        <p>Beautiful Wedding Decoration</p>
+
+        <div class="button-group">
+
+            <a href="tel:8806298182"
+               class="contact-button">
+                📞 Call
+            </a>
+
+            <a
+              href="https://wa.me/918806298182?text=I%20want%20to%20book%20Wedding%20Decoration%2004"
+              class="whatsapp-button">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+
+
+<!-- ==================================================
+     GHANA BANGDI DECORATION
+================================================== -->
+
+<div class="section-title">
+
+    <h2>
+        💍 घाना बांगडी डेकोरेशन
+    </h2>
+
+    <p>
+        Wedding Special Ghana Bangdi Decoration
+    </p>
+
+</div>
+
+
+<div class="gallery">
+
+
+<!-- PHOTO 5 -->
+
+<div class="photo-card">
+
+    <img
+        src="wedding jpg5.jpg"
+        alt="Ghana Bangdi Decoration 5"
+    >
+
+    <div class="photo-info">
+
+        <h3>घाना बांगडी डेकोरेशन 01</h3>
+
+        <p>Beautiful Wedding Decoration</p>
+
+        <div class="button-group">
+
+            <a href="tel:8806298182"
+               class="contact-button">
+                📞 Call
+            </a>
+
+            <a
+              href="https://wa.me/918806298182?text=Ghana%20Bangdi%20Decoration%2001"
+              class="whatsapp-button">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 6 -->
+
+<div class="photo-card">
+
+    <img
+        src="wedding jpg6.jpg"
+        alt="Ghana Bangdi Decoration 6"
+    >
+
+    <div class="photo-info">
+
+        <h3>घाना बांगडी डेकोरेशन 02</h3>
+
+        <p>Beautiful Wedding Decoration</p>
+
+        <div class="button-group">
+
+            <a href="tel:8806298182"
+               class="contact-button">
+                📞 Call
+            </a>
+
+            <a
+              href="https://wa.me/918806298182?text=Ghana%20Bangdi%20Decoration%2002"
+              class="whatsapp-button">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 7 -->
+
+<div class="photo-card">
+
+    <img
+        src="wedding jpg7.jpg"
+        alt="Ghana Bangdi Decoration 7"
+    >
+
+    <div class="photo-info">
+
+        <h3>घाना बांगडी डेकोरेशन 03</h3>
+
+        <p>Beautiful Wedding Decoration</p>
+
+        <div class="button-group">
+
+            <a href="tel:8806298182"
+               class="contact-button">
+                📞 Call
+            </a>
+
+            <a
+              href="https://wa.me/918806298182?text=Ghana%20Bangdi%20Decoration%2003"
+              class="whatsapp-button">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 8 -->
+
+<div class="photo-card">
+
+    <img
+        src="wedding jpg8.jpg"
+        alt="Ghana Bangdi Decoration 8"
+    >
+
+    <div class="photo-info">
+
+        <h3>घाना बांगडी डेकोरेशन 04</h3>
+
+        <p>Beautiful Wedding Decoration</p>
+
+        <div class="button-group">
+
+            <a href="tel:8806298182"
+               class="contact-button">
+                📞 Call
+            </a>
+
+            <a
+              href="https://wa.me/918806298182?text=Ghana%20Bangdi%20Decoration%2004"
+              class="whatsapp-button">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 9 -->
+
+<div class="photo-card">
+
+    <img
+        src="wedding jpg9.jpg"
+        alt="Ghana Bangdi Decoration 9"
+    >
+
+    <div class="photo-info">
+
+        <h3>घाना बांगडी डेकोरेशन 05</h3>
+
+        <p>Beautiful Wedding Decoration</p>
+
+        <div class="button-group">
+
+            <a href="tel:8806298182"
+               class="contact-button">
+                📞 Call
+            </a>
+
+            <a
+              href="https://wa.me/918806298182?text=Ghana%20Bangdi%20Decoration%2005"
+              class="whatsapp-button">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 10 -->
+
+<div class="photo-card">
+
+    <img
+        src="wedding jpg10.jpg"
+        alt="Ghana Bangdi Decoration 10"
+    >
+
+    <div class="photo-info">
+
+        <h3>घाना बांगडी डेकोरेशन 06</h3>
+
+        <p>Beautiful Wedding Decoration</p>
+
+        <div class="button-group">
+
+            <a href="tel:8806298182"
+               class="contact-button">
+                📞 Call
+            </a>
+
+            <a
+              href="https://wa.me/918806298182?text=Ghana%20Bangdi%20Decoration%2006"
+              class="whatsapp-button">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 11 -->
+
+<div class="photo-card">
+
+    <img
+        src="wedding jpg11.jpg"
+        alt="Ghana Bangdi Decoration 11"
+    >
+
+    <div class="photo-info">
+
+        <h3>घाना बांगडी डेकोरेशन 07</h3>
+
+        <p>Beautiful Wedding Decoration</p>
+
+        <div class="button-group">
+
+            <a href="tel:8806298182"
+               class="contact-button">
+                📞 Call
+            </a>
+
+            <a
+              href="https://wa.me/918806298182?text=Ghana%20Bangdi%20Decoration%2007"
+              class="whatsapp-button">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- ==================================================
+     SAPTAPADI DECORATION
+================================================== -->
+
+<div class="section-title">
+
+    <h2>
+        🌸 सप्तपदी डेकोरेशन
+    </h2>
+
+    <p>
+        Beautiful Saptapadi Wedding Decoration
+    </p>
+
+</div>
+
+
+<div class="gallery">
+
+
+<!-- PHOTO 12 -->
+
+<div class="photo-card">
+
+    <img
+        src="wedding jpg12.jpg"
+        alt="Saptapadi Decoration 12"
+    >
+
+    <div class="photo-info">
+
+        <h3>सप्तपदी डेकोरेशन 01</h3>
+
+        <p>Beautiful Saptapadi Decoration</p>
+
+        <div class="button-group">
+
+            <a href="tel:8806298182"
+               class="contact-button">
+                📞 Call
+            </a>
+
+            <a
+              href="https://wa.me/918806298182?text=Saptapadi%20Decoration%2001"
+              class="whatsapp-button">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 13 -->
+
+<div class="photo-card">
+
+    <img
+        src="wedding jpg13.jpg"
+        alt="Saptapadi Decoration 13"
+    >
+
+    <div class="photo-info">
+
+        <h3>सप्तपदी डेकोरेशन 02</h3>
+
+        <p>Beautiful Saptapadi Decoration</p>
+
+        <div class="button-group">
+
+            <a href="tel:8806298182"
+               class="contact-button">
+                📞 Call
+            </a>
+
+            <a
+              href="https://wa.me/918806298182?text=Saptapadi%20Decoration%2002"
+              class="whatsapp-button">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 14 -->
+
+<div class="photo-card">
+
+    <img
+        src="wedding jpg14.jpg"
+        alt="Saptapadi Decoration 14"
+    >
+
+    <div class="photo-info">
+
+        <h3>सप्तपदी डेकोरेशन 03</h3>
+
+        <p>Beautiful Saptapadi Decoration</p>
+
+        <div class="button-group">
+
+            <a href="tel:8806298182"
+               class="contact-button">
+                📞 Call
+            </a>
+
+            <a
+              href="https://wa.me/918806298182?text=Saptapadi%20Decoration%2003"
+              class="whatsapp-button">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 15 -->
+
+<div class="photo-card">
+
+    <img
+        src="wedding jpg15.jpg"
+        alt="Saptapadi Decoration 15"
+    >
+
+    <div class="photo-info">
+
+        <h3>सप्तपदी डेकोरेशन 04</h3>
+
+        <p>Beautiful Saptapadi Decoration</p>
+
+        <div class="button-group">
+
+            <a href="tel:8806298182"
+               class="contact-button">
+                📞 Call
+            </a>
+
+            <a
+              href="https://wa.me/918806298182?text=Saptapadi%20Decoration%2004"
+              class="whatsapp-button">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 16 -->
+
+<div class="photo-card">
+
+    <img
+        src="wedding jpg16.jpg"
+        alt="Saptapadi Decoration 16"
+    >
+
+    <div class="photo-info">
+
+        <h3>सप्तपदी डेकोरेशन 05</h3>
+
+        <p>Beautiful Saptapadi Decoration</p>
+
+        <div class="button-group">
+
+            <a href="tel:8806298182"
+               class="contact-button">
+                📞 Call
+            </a>
+
+            <a
+              href="https://wa.me/918806298182?text=Saptapadi%20Decoration%2005"
+              class="whatsapp-button">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 17 -->
+
+<div class="photo-card">
+
+    <img
+        src="wedding jpg17.jpg"
+        alt="Saptapadi Decoration 17"
+    >
+
+    <div class="photo-info">
+
+        <h3>सप्तपदी डेकोरेशन 06</h3>
+
+        <p>Beautiful Saptapadi Decoration</p>
+
+        <div class="button-group">
+
+            <a href="tel:8806298182"
+               class="contact-button">
+                📞 Call
+            </a>
+
+            <a
+              href="https://wa.me/918806298182?text=Saptapadi%20Decoration%2006"
+              class="whatsapp-button">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 18 -->
+
+<div class="photo-card">
+
+    <img
+        src="wedding jpg18.jpg"
+        alt="Saptapadi Decoration 18"
+    >
+
+    <div class="photo-info">
+
+        <h3>सप्तपदी डेकोरेशन 07</h3>
+
+        <p>Beautiful Saptapadi Decoration</p>
+
+        <div class="button-group">
+
+            <a href="tel:8806298182"
+               class="contact-button">
+                📞 Call
+            </a>
+
+            <a
+              href="https://wa.me/918806298182?text=Saptapadi%20Decoration%2007"
+              class="whatsapp-button">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- =========================
+     FULL SCREEN VIEWER
+========================= -->
+
+<div id="photoViewer"
+     class="photo-viewer">
+
+    <span
+        class="close-viewer"
+        onclick="closePhoto()">
+
+        &times;
+
+    </span>
+
+
+    <img
+        id="fullScreenPhoto"
+        src=""
+        alt="Full Screen Photo">
+
+</div>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <h3>
+        श्री जगदंबा फुल भंडार व इव्हेंट डेकोरेशन
+    </h3>
+
+    <p>
+        बीड बायपास रोड, बाळापूर,
+        छत्रपती संभाजीनगर
+    </p>
+
+    <p>
+        📞 8806298182
+    </p>
+
+</footer>
+
+
+
+<script>
+
+/* =================================
+   FULL SCREEN PHOTO
+================================= */
+
+const photos =
+document.querySelectorAll(".photo-card img");
+
+
+const viewer =
+document.getElementById("photoViewer");
+
+
+const fullScreenPhoto =
+document.getElementById("fullScreenPhoto");
+
+
+/* OPEN PHOTO */
+
+photos.forEach(function(photo) {
+
+    photo.addEventListener("click", function() {
+
+        viewer.style.display = "flex";
+
+        fullScreenPhoto.src = this.src;
+
+        fullScreenPhoto.alt = this.alt;
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+});
+
+
+/* CLOSE PHOTO */
+
+function closePhoto() {
+
+    viewer.style.display = "none";
+
+    fullScreenPhoto.src = "";
+
+    document.body.style.overflow = "auto";
+
+}
+
+
+/* CLOSE WITH ESC */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if(event.key === "Escape") {
+
+            closePhoto();
+
+        }
+
+    }
+);
+
+
+/* CLOSE BY CLICKING OUTSIDE IMAGE */
+
+viewer.addEventListener(
+    "click",
+    function(event) {
+
+        if(event.target === viewer) {
+
+            closePhoto();
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

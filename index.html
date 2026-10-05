@@ -1,0 +1,348 @@
+<!DOCTYPE html><html lang="mr"><head><meta charset="UTF-8"><meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+श्री जगदंबा फुल भंडार व इव्हेंट डेकोरेशन
+</title><style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff3e0,
+        #ffe0b2,
+        #fff8e1
+    );
+
+}
+
+.login-container {
+
+    width: 92%;
+
+    max-width: 450px;
+
+    padding: 35px 25px;
+
+    background: rgba(255,255,255,0.96);
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.20);
+
+}
+
+/* LOGO */
+
+.logo {
+
+    width: 140px;
+
+    height: 140px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+
+}
+
+/* SHOP NAME */
+
+h1 {
+
+    font-size: 25px;
+
+    line-height: 1.5;
+
+    color: #8b0000;
+
+    margin-bottom: 10px;
+
+}
+
+/* WELCOME */
+
+.welcome {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #d35400;
+
+    margin-bottom: 30px;
+
+}
+
+/* LOGIN TITLE */
+
+.login-title {
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    color: #333;
+
+    margin-bottom: 15px;
+
+}
+
+/* INPUT */
+
+input {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    outline: none;
+
+    margin-bottom: 18px;
+
+}
+
+input:focus {
+
+    border-color: #d35400;
+
+}
+
+/* LOGIN BUTTON */
+
+button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #8b0000,
+        #e65100
+    );
+
+    color: white;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+button:hover {
+
+    transform: scale(1.03);
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,0.20);
+
+}
+
+/* ERROR */
+
+#error {
+
+    display: none;
+
+    margin-top: 15px;
+
+    color: red;
+
+    font-size: 15px;
+
+}
+
+/* FOOTER */
+
+.footer {
+
+    margin-top: 25px;
+
+    font-size: 13px;
+
+    color: #777;
+
+}
+
+</style></head><body><div class="login-container"><!-- =====================
+     LOGO
+====================== -->
+
+<img
+    src="logo.png"
+    alt="श्री जगदंबा लोगो"
+    class="logo"
+>
+
+
+<!-- =====================
+     SHOP NAME
+====================== -->
+
+<h1>
+
+    श्री जगदंबा फुल भंडार
+    <br>
+    व इव्हेंट डेकोरेशन
+
+</h1>
+
+
+<!-- =====================
+     WELCOME
+====================== -->
+
+<div class="welcome">
+
+    मध्ये सहर्ष स्वागत आहे
+
+</div>
+
+
+<!-- =====================
+     ACCESS CODE
+====================== -->
+
+<div class="login-title">
+
+    प्रवेशासाठी प्रवेश कोड
+
+</div>
+
+
+<input
+    type="password"
+    id="accessCode"
+    placeholder="प्रवेश कोड टाका"
+    onkeypress="checkEnter(event)"
+>
+
+
+<!-- =====================
+     LOGIN BUTTON
+====================== -->
+
+<button onclick="login()">
+
+    प्रवेश करा
+
+</button>
+
+
+<!-- =====================
+     ERROR MESSAGE
+====================== -->
+
+<div id="error">
+
+    ❌ चुकीचा प्रवेश कोड!
+    <br>
+    कृपया योग्य कोड टाका.
+
+</div>
+
+
+<div class="footer">
+
+    Shri Jagadamba Flower & Event Decoration
+
+</div>
+
+</div><script>
+
+/* =================================
+   तुमचा प्रवेश कोड
+================================= */
+
+const correctCode = "1234";
+
+
+/* =================================
+   LOGIN
+================================= */
+
+function login() {
+
+    const code =
+        document.getElementById("accessCode").value;
+
+    const error =
+        document.getElementById("error");
+
+
+    /* योग्य कोड */
+
+    if (code === correctCode) {
+
+        /*
+         * Login केल्यानंतर
+         * dashboard.html उघडेल
+         */
+
+        window.location.href = "dashboard.html";
+
+    }
+
+    /* चुकीचा कोड */
+
+    else {
+
+        error.style.display = "block";
+
+    }
+
+}
+
+
+/* =================================
+   ENTER BUTTON
+================================= */
+
+function checkEnter(event) {
+
+    if (event.key === "Enter") {
+
+        login();
+
+    }
+
+}
+
+</script></body></html>

@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>
+Balloon Decoration - Shri Jagadamba
+</title>
+
+
+<style>
+
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    background: #f7f7f7;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+
+    background: linear-gradient(
+        135deg,
+        #8e0000,
+        #d4af37
+    );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px 15px;
+}
+
+
+header h1 {
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+
+header p {
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-button {
+
+    display: inline-block;
+
+    margin: 20px;
+
+    padding: 10px 20px;
+
+    background: #8e0000;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+
+.back-button:hover {
+
+    background: #c00000;
+}
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.page-title {
+
+    text-align: center;
+
+    margin: 10px 0 30px;
+}
+
+
+.page-title h2 {
+
+    color: #8e0000;
+
+    font-size: 28px;
+}
+
+
+.page-title p {
+
+    color: #666;
+
+    margin-top: 8px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+
+    padding-bottom: 50px;
+}
+
+
+/* =========================
+   PHOTO CARD
+========================= */
+
+.photo-card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+    0 5px 18px rgba(0,0,0,0.15);
+
+    transition: 0.3s;
+}
+
+
+.photo-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.25);
+}
+
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo-card img {
+
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    display: block;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.photo-card img:hover {
+
+    opacity: 0.88;
+}
+
+
+/* =========================
+   PHOTO INFORMATION
+========================= */
+
+.photo-info {
+
+    text-align: center;
+
+    padding: 15px;
+}
+
+
+.photo-info h3 {
+
+    color: #8e0000;
+
+    font-size: 18px;
+
+    margin-bottom: 6px;
+}
+
+
+.photo-info p {
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   WHATSAPP BUTTON
+========================= */
+
+.whatsapp-button {
+
+    display: inline-block;
+
+    margin-top: 8px;
+
+    padding: 10px 16px;
+
+    background: #25D366;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.whatsapp-button:hover {
+
+    background: #128C7E;
+
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   FULL SCREEN VIEWER
+========================= */
+
+.lightbox {
+
+    display: none;
+
+    position: fixed;
+
+    z-index: 9999;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0,0,0,0.96);
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* FULL SCREEN IMAGE */
+
+.lightbox img {
+
+    max-width: 90%;
+
+    max-height: 85%;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+    box-shadow:
+    0 0 30px rgba(255,255,255,0.15);
+}
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.close-btn {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 30px;
+
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    z-index: 10001;
+
+    line-height: 1;
+}
+
+
+.close-btn:hover {
+
+    color: #d4af37;
+}
+
+
+/* =========================
+   PREVIOUS / NEXT
+========================= */
+
+.prev-btn,
+.next-btn {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: white;
+
+    background: rgba(0,0,0,0.5);
+
+    border: 2px solid white;
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 10001;
+}
+
+
+.prev-btn {
+
+    left: 25px;
+}
+
+
+.next-btn {
+
+    right: 25px;
+}
+
+
+.prev-btn:hover,
+.next-btn:hover {
+
+    background: #d4af37;
+
+    color: #000;
+
+    border-color: #d4af37;
+}
+
+
+/* =========================
+   PHOTO COUNTER
+========================= */
+
+.photo-counter {
+
+    position: absolute;
+
+    top: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    font-size: 17px;
+
+    background: rgba(0,0,0,0.5);
+
+    padding: 7px 15px;
+
+    border-radius: 20px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #8e0000;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 20px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px) {
+
+    header h1 {
+
+        font-size: 22px;
+    }
+
+
+    .gallery {
+
+        width: 94%;
+
+        grid-template-columns:
+        repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+
+    .photo-card img {
+
+        height: 180px;
+    }
+
+
+    .photo-info {
+
+        padding: 10px;
+    }
+
+
+    .photo-info h3 {
+
+        font-size: 15px;
+    }
+
+
+    .whatsapp-button {
+
+        font-size: 12px;
+
+        padding: 8px 9px;
+    }
+
+
+    .lightbox img {
+
+        max-width: 94%;
+
+        max-height: 75%;
+    }
+
+
+    .prev-btn,
+    .next-btn {
+
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 24px;
+    }
+
+
+    .prev-btn {
+
+        left: 10px;
+    }
+
+
+    .next-btn {
+
+        right: 10px;
+    }
+
+
+    .close-btn {
+
+        top: 15px;
+
+        right: 18px;
+
+        font-size: 38px;
+    }
+
+
+    .photo-counter {
+
+        top: 20px;
+
+        font-size: 14px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <h1>
+        🌸 श्री जगदंबा फुल भंडार व इव्हेंट डेकोरेशन 🌸
+    </h1>
+
+    <p>
+        Chhatrapati Sambhajinagar
+    </p>
+
+</header>
+
+
+<!-- =========================
+     BACK BUTTON
+========================= -->
+
+<a href="index.html"
+   class="back-button">
+
+    ← Back
+
+</a>
+
+
+<!-- =========================
+     PAGE TITLE
+========================= -->
+
+<div class="page-title">
+
+    <h2>
+        🎈 Balloon Decoration
+    </h2>
+
+    <p>
+        Our Beautiful Balloon Decoration Designs
+    </p>
+
+</div>
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<div class="gallery">
+
+
+<!-- PHOTO 1 -->
+
+<div class="photo-card">
+
+    <img
+        src="balloon decoration jpg1.jpg"
+        alt="Balloon Decoration 1"
+        onclick="openLightbox(0)"
+    >
+
+    <div class="photo-info">
+
+        <h3>
+            Balloon Decoration 01
+        </h3>
+
+        <p>
+            Beautiful Balloon Decoration
+        </p>
+
+        <a
+            href="https://wa.me/918806298182?text=मला%20Balloon%20Decoration%2001%20आवडले%20आहे.%20या%20Decoration%20ची%20किंमत%20आणि%20माहिती%20पाठवा."
+            class="whatsapp-button"
+            target="_blank"
+        >
+            💬 WhatsApp Contact
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 2 -->
+
+<div class="photo-card">
+
+    <img
+        src="balloon decoration jpg2.jpg"
+        alt="Balloon Decoration 2"
+        onclick="openLightbox(1)"
+    >
+
+    <div class="photo-info">
+
+        <h3>
+            Balloon Decoration 02
+        </h3>
+
+        <p>
+            Beautiful Balloon Decoration
+        </p>
+
+        <a
+            href="https://wa.me/918806298182?text=मला%20Balloon%20Decoration%2002%20आवडले%20आहे.%20या%20Decoration%20ची%20किंमत%20आणि%20माहिती%20पाठवा."
+            class="whatsapp-button"
+            target="_blank"
+        >
+            💬 WhatsApp Contact
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 3 -->
+
+<div class="photo-card">
+
+    <img
+        src="balloon decoration jpg3.jpg"
+        alt="Balloon Decoration 3"
+        onclick="openLightbox(2)"
+    >
+
+    <div class="photo-info">
+
+        <h3>
+            Balloon Decoration 03
+        </h3>
+
+        <p>
+            Beautiful Balloon Decoration
+        </p>
+
+        <a
+            href="https://wa.me/918806298182?text=मला%20Balloon%20Decoration%2003%20आवडले%20आहे.%20या%20Decoration%20ची%20किंमत%20आणि%20माहिती%20पाठवा."
+            class="whatsapp-button"
+            target="_blank"
+        >
+            💬 WhatsApp Contact
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 4 -->
+
+<div class="photo-card">
+
+    <img
+        src="balloon decoration jpg4.jpg"
+        alt="Balloon Decoration 4"
+        onclick="openLightbox(3)"
+    >
+
+    <div class="photo-info">
+
+        <h3>
+            Balloon Decoration 04
+        </h3>
+
+        <p>
+            Beautiful Balloon Decoration
+        </p>
+
+        <a
+            href="https://wa.me/918806298182?text=मला%20Balloon%20Decoration%2004%20आवडले%20आहे.%20या%20Decoration%20ची%20किंमत%20आणि%20माहिती%20पाठवा."
+            class="whatsapp-button"
+            target="_blank"
+        >
+            💬 WhatsApp Contact
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 5 -->
+
+<div class="photo-card">
+
+    <img
+        src="balloon decoration jpg5.jpg"
+        alt="Balloon Decoration 5"
+        onclick="openLightbox(4)"
+    >
+
+    <div class="photo-info">
+
+        <h3>
+            Balloon Decoration 05
+        </h3>
+
+        <p>
+            Beautiful Balloon Decoration
+        </p>
+
+        <a
+            href="https://wa.me/918806298182?text=मला%20Balloon%20Decoration%2005%20आवडले%20आहे.%20या%20Decoration%20ची%20किंमत%20आणि%20माहिती%20पाठवा."
+            class="whatsapp-button"
+            target="_blank"
+        >
+            💬 WhatsApp Contact
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 6 -->
+
+<div class="photo-card">
+
+    <img
+        src="balloon decoration jpg6.jpg"
+        alt="Balloon Decoration 6"
+        onclick="openLightbox(5)"
+    >
+
+    <div class="photo-info">
+
+        <h3>
+            Balloon Decoration 06
+        </h3>
+
+        <p>
+            Beautiful Balloon Decoration
+        </p>
+
+        <a
+            href="https://wa.me/918806298182?text=मला%20Balloon%20Decoration%2006%20आवडले%20आहे.%20या%20Decoration%20ची%20किंमत%20आणि%20माहिती%20पाठवा."
+            class="whatsapp-button"
+            target="_blank"
+        >
+            💬 WhatsApp Contact
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 7 -->
+
+<div class="photo-card">
+
+    <img
+        src="balloon decoration jpg7.jpg"
+        alt="Balloon Decoration 7"
+        onclick="openLightbox(6)"
+    >
+
+    <div class="photo-info">
+
+        <h3>
+            Balloon Decoration 07
+        </h3>
+
+        <p>
+            Beautiful Balloon Decoration
+        </p>
+
+        <a
+            href="https://wa.me/918806298182?text=मला%20Balloon%20Decoration%2007%20आवडले%20आहे.%20या%20Decoration%20ची%20किंमत%20आणि%20माहिती%20पाठवा."
+            class="whatsapp-button"
+            target="_blank"
+        >
+            💬 WhatsApp Contact
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- PHOTO 8 -->
+
+<div class="photo-card">
+
+    <img
+        src="balloon decoration jpg8.jpg"
+        alt="Balloon Decoration 8"
+        onclick="openLightbox(7)"
+    >
+
+    <div class="photo-info">
+
+        <h3>
+            Balloon Decoration 08
+        </h3>
+
+        <p>
+            Beautiful Balloon Decoration
+        </p>
+
+        <a
+            href="https://wa.me/918806298182?text=मला%20Balloon%20Decoration%2008%20आवडले%20आहे.%20या%20Decoration%20ची%20किंमत%20आणि%20माहिती%20पाठवा."
+            class="whatsapp-button"
+            target="_blank"
+        >
+            💬 WhatsApp Contact
+        </a>
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+<!-- =========================
+     FULL SCREEN LIGHTBOX
+========================= -->
+
+<div
+    class="lightbox"
+    id="lightbox"
+    onclick="closeOutside(event)"
+>
+
+
+    <!-- CLOSE -->
+
+    <span
+        class="close-btn"
+        onclick="closeLightbox()"
+    >
+        &times;
+    </span>
+
+
+    <!-- COUNTER -->
+
+    <div
+        class="photo-counter"
+        id="photoCounter"
+    >
+        1 / 8
+    </div>
+
+
+    <!-- PREVIOUS -->
+
+    <button
+        class="prev-btn"
+        onclick="previousPhoto(event)"
+    >
+        ❮
+    </button>
+
+
+    <!-- IMAGE -->
+
+    <img
+        id="lightboxImage"
+        src=""
+        alt="Full Screen Balloon Decoration"
+    >
+
+
+    <!-- NEXT -->
+
+    <button
+        class="next-btn"
+        onclick="nextPhoto(event)"
+    >
+        ❯
+    </button>
+
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <h3>
+        श्री जगदंबा फुल भंडार व इव्हेंट डेकोरेशन
+    </h3>
+
+    <p>
+        बीड बायपास रोड, बाळापूर,
+        छत्रपती संभाजीनगर
+    </p>
+
+    <p>
+        📞 8806298182
+    </p>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   ALL PHOTOS
+========================= */
+
+const photos = [
+
+    "balloon decoration jpg1.jpg",
+
+    "balloon decoration jpg2.jpg",
+
+    "balloon decoration jpg3.jpg",
+
+    "balloon decoration jpg4.jpg",
+
+    "balloon decoration jpg5.jpg",
+
+    "balloon decoration jpg6.jpg",
+
+    "balloon decoration jpg7.jpg",
+
+    "balloon decoration jpg8.jpg"
+
+];
+
+
+let currentPhoto = 0;
+
+
+/* =========================
+   OPEN FULL SCREEN
+========================= */
+
+function openLightbox(index) {
+
+    currentPhoto = index;
+
+    document
+        .getElementById("lightbox")
+        .style.display = "flex";
+
+    showPhoto();
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+/* =========================
+   SHOW PHOTO
+========================= */
+
+function showPhoto() {
+
+    document
+        .getElementById("lightboxImage")
+        .src = photos[currentPhoto];
+
+
+    document
+        .getElementById("photoCounter")
+        .innerText =
+        (currentPhoto + 1)
+        + " / "
+        + photos.length;
+
+}
+
+
+/* =========================
+   NEXT
+========================= */
+
+function nextPhoto(event) {
+
+    event.stopPropagation();
+
+    currentPhoto++;
+
+    if (
+        currentPhoto >= photos.length
+    ) {
+
+        currentPhoto = 0;
+
+    }
+
+    showPhoto();
+
+}
+
+
+/* =========================
+   PREVIOUS
+========================= */
+
+function previousPhoto(event) {
+
+    event.stopPropagation();
+
+    currentPhoto--;
+
+    if (currentPhoto < 0) {
+
+        currentPhoto =
+            photos.length - 1;
+
+    }
+
+    showPhoto();
+
+}
+
+
+/* =========================
+   CLOSE
+========================= */
+
+function closeLightbox() {
+
+    document
+        .getElementById("lightbox")
+        .style.display = "none";
+
+    document.body.style.overflow = "auto";
+
+}
+
+
+/* =========================
+   CLOSE OUTSIDE
+========================= */
+
+function closeOutside(event) {
+
+    if (
+        event.target.id === "lightbox"
+    ) {
+
+        closeLightbox();
+
+    }
+
+}
+
+
+/* =========================
+   KEYBOARD CONTROL
+========================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            document
+            .getElementById("lightbox")
+            .style.display !== "flex"
+        ) {
+
+            return;
+
+        }
+
+
+        /* NEXT */
+
+        if (
+            event.key === "ArrowRight"
+        ) {
+
+            currentPhoto++;
+
+            if (
+                currentPhoto >= photos.length
+            ) {
+
+                currentPhoto = 0;
+
+            }
+
+            showPhoto();
+
+        }
+
+
+        /* PREVIOUS */
+
+        if (
+            event.key === "ArrowLeft"
+        ) {
+
+            currentPhoto--;
+
+            if (
+                currentPhoto < 0
+            ) {
+
+                currentPhoto =
+                    photos.length - 1;
+
+            }
+
+            showPhoto();
+
+        }
+
+
+        /* ESC */
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            closeLightbox();
+
+        }
+
+    }
+);
+
+
+/* =========================
+   MOBILE SWIPE
+========================= */
+
+let touchStartX = 0;
+
+let touchEndX = 0;
+
+
+const lightbox =
+    document.getElementById("lightbox");
+
+
+lightbox.addEventListener(
+    "touchstart",
+    function(event) {
+
+        touchStartX =
+            event.changedTouches[0].screenX;
+
+    }
+);
+
+
+lightbox.addEventListener(
+    "touchend",
+    function(event) {
+
+        touchEndX =
+            event.changedTouches[0].screenX;
+
+        handleSwipe();
+
+    }
+);
+
+
+function handleSwipe() {
+
+    const difference =
+        touchStartX - touchEndX;
+
+
+    if (
+        Math.abs(difference) < 50
+    ) {
+
+        return;
+
+    }
+
+
+    /* SWIPE LEFT */
+
+    if (difference > 0) {
+
+        currentPhoto++;
+
+        if (
+            currentPhoto >= photos.length
+        ) {
+
+            currentPhoto = 0;
+
+        }
+
+    }
+
+
+    /* SWIPE RIGHT */
+
+    else {
+
+        currentPhoto--;
+
+        if (
+            currentPhoto < 0
+        ) {
+
+            currentPhoto =
+                photos.length - 1;
+
+        }
+
+    }
+
+
+    showPhoto();
+
+}
+
+</script>
+
+
+</body>
+
+</html>
