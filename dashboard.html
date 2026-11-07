@@ -1,23 +1,17 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mr">
 
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<title>
-Shri Jagadamba Flower & Event Decoration
-</title>
-
+<title>Shri Jagadamba Flower & Event Decoration</title>
 
 <style>
 
-/* =========================
-   BASIC RESET
-========================= */
+/* BASIC RESET */
 
 * {
     margin: 0;
@@ -35,913 +29,527 @@ body {
     color: #333;
 }
 
-
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header {
-
-    background: linear-gradient(
-        135deg,
-        #7b0000,
-        #b8860b
-    );
-
+    background: linear-gradient(135deg, #7b0000, #b8860b);
     color: white;
-
     padding: 18px 5%;
-
     position: sticky;
-
     top: 0;
-
     z-index: 1000;
-
-    box-shadow:
-        0 3px 18px rgba(0,0,0,0.25);
+    box-shadow: 0 3px 18px rgba(0,0,0,0.25);
 }
 
-
 .header-content {
-
     max-width: 1200px;
-
     margin: auto;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     gap: 20px;
 }
 
-
 .logo {
-
     font-size: 23px;
-
     font-weight: bold;
 }
 
-
 .logo span {
-
     display: block;
-
     font-size: 13px;
-
     margin-top: 5px;
-
     font-weight: normal;
 }
 
-
 nav {
-
     display: flex;
-
     gap: 20px;
-
     flex-wrap: wrap;
-
     justify-content: center;
 }
 
-
 nav a {
-
     color: white;
-
     text-decoration: none;
-
     font-weight: bold;
-
     transition: 0.3s;
 }
 
-
 nav a:hover {
-
     color: #ffe8a3;
-
 }
 
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
-
     min-height: 430px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     text-align: center;
-
     padding: 60px 20px;
 
     background:
-
     linear-gradient(
         rgba(70,0,0,0.70),
         rgba(70,0,0,0.70)
     ),
-
     url("images/shop-banner.jpg");
 
     background-size: cover;
-
     background-position: center;
-
     color: white;
 }
 
-
 .hero-content {
-
     max-width: 850px;
-
 }
-
 
 .hero h1 {
-
     font-size: 46px;
-
     margin-bottom: 18px;
-
 }
-
 
 .hero h1 span {
-
     color: #ffd76a;
-
 }
 
-
 .hero p {
-
     font-size: 20px;
-
     line-height: 1.7;
-
     margin-bottom: 28px;
 }
 
-
 .hero-buttons {
-
     display: flex;
-
     justify-content: center;
-
     gap: 15px;
-
     flex-wrap: wrap;
 }
 
-
 .btn {
-
     display: inline-block;
-
     padding: 14px 25px;
-
     border-radius: 30px;
-
     text-decoration: none;
-
     font-weight: bold;
-
     transition: 0.3s;
 }
 
-
 .btn-primary {
-
     background: #d4af37;
-
     color: #4b0000;
 }
 
-
-.btn-primary:hover {
-
+.btn-primary:hover,
+.btn-white:hover {
     transform: scale(1.05);
-
 }
 
-
 .btn-white {
-
     background: white;
-
     color: #7b0000;
 }
 
-
-.btn-white:hover {
-
-    transform: scale(1.05);
-
-}
-
-
-/* =========================
-   SECTION
-========================= */
+/* SECTION */
 
 section {
-
     padding: 65px 5%;
 }
 
-
 .section-title {
-
     text-align: center;
-
     margin-bottom: 40px;
 }
 
-
 .section-title h2 {
-
     color: #7b0000;
-
     font-size: 34px;
-
     margin-bottom: 12px;
 }
 
-
 .section-title p {
-
     color: #666;
-
     font-size: 17px;
 }
 
-
-/* =========================
-   ABOUT
-========================= */
+/* ABOUT */
 
 .about {
-
     background: white;
 }
 
-
 .about-box {
-
     max-width: 1000px;
-
     margin: auto;
-
     background: #fffaf0;
-
     padding: 35px;
-
     border-radius: 20px;
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,0.08);
-
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     text-align: center;
 }
 
-
 .about-box h3 {
-
     color: #7b0000;
-
     font-size: 26px;
-
     margin-bottom: 15px;
 }
 
-
 .about-box p {
-
     color: #555;
-
     line-height: 1.8;
-
     font-size: 17px;
+    margin-bottom: 12px;
 }
 
-
-/* =========================
-   SERVICES
-========================= */
+/* SERVICES */
 
 .services-section {
-
     background: #fff5e6;
 }
 
-
 .service-grid {
-
     max-width: 1200px;
-
     margin: auto;
-
     display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(250px, 1fr));
-
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
 }
 
-
 .service-card {
-
     background: white;
-
     padding: 30px 22px;
-
     border-radius: 22px;
-
     text-align: center;
-
     cursor: pointer;
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,0.10);
-
+    box-shadow: 0 8px 25px rgba(0,0,0,0.10);
     transition: 0.35s;
-
     border: 1px solid #f1e0c0;
 }
 
-
 .service-card:hover {
-
     transform: translateY(-10px);
-
-    box-shadow:
-        0 18px 35px rgba(0,0,0,0.17);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.17);
 }
-
 
 .service-icon {
-
     width: 80px;
-
     height: 80px;
-
-    margin: auto;
-
+    margin: auto auto 18px;
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     border-radius: 50%;
-
     background: #fff3d1;
-
     font-size: 42px;
-
-    margin-bottom: 18px;
 }
 
-
 .service-card h3 {
-
     color: #7b0000;
-
     font-size: 21px;
-
     margin-bottom: 12px;
 }
 
-
 .service-card p {
-
     color: #666;
-
     line-height: 1.6;
-
     min-height: 50px;
-
     margin-bottom: 20px;
 }
 
-
 .service-card button {
-
     border: none;
-
     background: #7b0000;
-
     color: white;
-
     padding: 11px 20px;
-
     border-radius: 25px;
-
     font-weight: bold;
-
     cursor: pointer;
-
     transition: 0.3s;
 }
 
-
 .service-card button:hover {
-
     background: #b8860b;
 }
 
-
-/* =========================
-   OTHER SERVICES
-========================= */
+/* OTHER SERVICES */
 
 .other-services {
-
     background: white;
 }
 
-
 .other-grid {
-
     max-width: 1100px;
-
     margin: auto;
-
     display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(220px, 1fr));
-
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
-
 .other-card {
-
     padding: 25px;
-
     background: #faf7f2;
-
     border-radius: 18px;
-
     text-align: center;
-
     border: 1px solid #eee;
-
     transition: 0.3s;
 }
 
-
 .other-card:hover {
-
     transform: translateY(-5px);
-
-    box-shadow:
-        0 10px 25px rgba(0,0,0,0.10);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.10);
 }
 
-
 .other-card .icon {
-
     font-size: 40px;
-
     margin-bottom: 12px;
 }
 
-
 .other-card h3 {
-
     color: #7b0000;
-
     margin-bottom: 8px;
 }
 
-
 .other-card p {
-
     color: #666;
-
     line-height: 1.5;
 }
 
-
-/* =========================
-   WHY US
-========================= */
+/* WHY US */
 
 .why-us {
-
     background: #fff5e6;
 }
 
-
 .why-grid {
-
     max-width: 1000px;
-
     margin: auto;
-
     display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(220px, 1fr));
-
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
-
 .why-card {
-
     background: white;
-
     padding: 25px;
-
     text-align: center;
-
     border-radius: 18px;
-
-    box-shadow:
-        0 5px 18px rgba(0,0,0,0.07);
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
 }
 
-
 .why-card span {
-
     font-size: 38px;
-
     display: block;
-
     margin-bottom: 10px;
 }
 
-
 .why-card h3 {
-
     color: #7b0000;
-
     margin-bottom: 8px;
 }
 
-
 .why-card p {
-
     color: #666;
 }
 
-
-/* =========================
-   LOCATION
-========================= */
+/* LOCATION */
 
 .location {
-
     background: white;
-
     text-align: center;
 }
 
-
 .location-box {
-
     max-width: 800px;
-
     margin: auto;
-
     background: #faf7f2;
-
     padding: 35px;
-
     border-radius: 20px;
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
-
 .location-box h3 {
-
     color: #7b0000;
-
     font-size: 24px;
-
     margin-bottom: 15px;
 }
 
-
 .location-box p {
-
     color: #555;
-
     font-size: 17px;
-
     line-height: 1.7;
 }
 
-
 .map-btn {
-
     display: inline-block;
-
     margin-top: 20px;
-
     padding: 13px 25px;
-
     background: #7b0000;
-
     color: white;
-
     text-decoration: none;
-
     border-radius: 30px;
-
     font-weight: bold;
 }
 
-
-/* =========================
-   CONTACT
-========================= */
+/* CONTACT */
 
 .contact-section {
-
-    background:
-        linear-gradient(
-            135deg,
-            #7b0000,
-            #b8860b
-        );
-
+    background: linear-gradient(135deg, #7b0000, #b8860b);
     color: white;
-
     text-align: center;
 }
 
-
 .contact-section h2 {
-
     font-size: 34px;
-
     margin-bottom: 12px;
 }
 
-
 .contact-section p {
-
     margin-bottom: 25px;
-
     font-size: 17px;
 }
 
-
 .contact-buttons {
-
     display: flex;
-
     justify-content: center;
-
     gap: 12px;
-
     flex-wrap: wrap;
 }
 
-
 .contact-btn {
-
     display: inline-block;
-
     padding: 13px 22px;
-
     border-radius: 30px;
-
     text-decoration: none;
-
     font-weight: bold;
 }
 
-
 .call-btn {
-
     background: white;
-
     color: #7b0000;
 }
 
-
 .whatsapp-btn {
-
     background: #128c7e;
-
     color: white;
 }
 
-
-/* =========================
-   SOCIAL MEDIA
-========================= */
+/* SOCIAL MEDIA */
 
 .social-section {
-
     margin-top: 35px;
 }
 
-
 .social-section h3 {
-
     font-size: 22px;
-
     margin-bottom: 20px;
 }
 
-
 .social-buttons {
-
     display: flex;
-
     justify-content: center;
-
     gap: 12px;
-
     flex-wrap: wrap;
 }
 
-
 .social-btn {
-
     display: inline-block;
-
     padding: 12px 20px;
-
     border-radius: 30px;
-
     text-decoration: none;
-
     font-weight: bold;
-
     transition: 0.3s;
 }
 
-
 .social-btn:hover {
-
     transform: translateY(-4px);
-
-    box-shadow:
-        0 8px 18px rgba(0,0,0,0.20);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.20);
 }
-
-
-/* INSTAGRAM */
 
 .instagram-btn {
-
     background: #e1306c;
-
     color: white;
 }
-
-
-/* FACEBOOK */
 
 .facebook-btn {
-
     background: #1877f2;
-
     color: white;
 }
 
-
-/* EMAIL */
-
 .email-btn {
-
     background: white;
-
     color: #7b0000;
 }
 
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
-
     background: #350000;
-
     color: white;
-
     text-align: center;
-
     padding: 35px 20px;
 }
 
-
 footer h3 {
-
     margin-bottom: 12px;
 }
 
-
 footer p {
-
     margin: 7px;
-
     color: #ddd;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:700px) {
 
     .header-content {
-
         flex-direction: column;
-
     }
 
     nav {
-
         gap: 12px;
-
     }
 
     nav a {
-
         font-size: 14px;
-
     }
 
     .hero {
-
         min-height: 400px;
-
     }
 
     .hero h1 {
-
         font-size: 32px;
-
     }
 
     .hero p {
-
         font-size: 17px;
-
     }
 
     section {
-
         padding: 45px 20px;
-
     }
 
     .section-title h2 {
-
         font-size: 27px;
-
     }
 
     .social-btn {
-
         width: 90%;
-
         max-width: 300px;
-
+        text-align: center;
     }
-
 }
 
 </style>
 
 </head>
 
-
 <body>
 
-
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HEADER -->
 
 <header>
 
@@ -957,28 +565,17 @@ footer p {
 
 </div>
 
-
 <nav>
 
-<a href="index.html">
-Home
-</a>
+<a href="index.html">Home</a>
 
-<a href="#about">
-About
-</a>
+<a href="#about">About</a>
 
-<a href="#services">
-Services
-</a>
+<a href="#services">Services</a>
 
-<a href="#location">
-Location
-</a>
+<a href="#location">Location</a>
 
-<a href="#contact">
-Contact
-</a>
+<a href="#contact">Contact</a>
 
 </nav>
 
@@ -987,50 +584,30 @@ Contact
 </header>
 
 
-
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero">
 
 <div class="hero-content">
 
 <h1>
-
 श्री जगदंबा
-<span>
-Flower & Event Decoration
-</span>
-
+<span>Flower & Event Decoration</span>
 </h1>
 
-
 <p>
-
 Fresh Flowers • पूजा सामग्री • Wedding Decoration •
 Balloon Decoration • Event Decoration
-
 </p>
-
 
 <div class="hero-buttons">
 
-<a
-href="#services"
-class="btn btn-primary">
-
+<a href="#services" class="btn btn-primary">
 🎉 Our Services
-
 </a>
 
-
-<a
-href="#contact"
-class="btn btn-white">
-
+<a href="#contact" class="btn btn-white">
 📞 Contact Us
-
 </a>
 
 </div>
@@ -1040,20 +617,13 @@ class="btn btn-white">
 </section>
 
 
+<!-- ABOUT -->
 
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section
-id="about"
-class="about">
+<section id="about" class="about">
 
 <div class="section-title">
 
-<h2>
-🌸 आमच्याबद्दल
-</h2>
+<h2>🌸 आमच्याबद्दल</h2>
 
 <p>
 आपल्या प्रत्येक कार्यक्रमासाठी सुंदर सजावट आणि आवश्यक साहित्य
@@ -1061,31 +631,24 @@ class="about">
 
 </div>
 
-
 <div class="about-box">
 
 <h3>
 श्री जगदंबा फुल भंडार व इव्हेंट डेकोरेशन
 </h3>
 
-
 <p>
-
 श्री जगदंबा फुल भंडार व इव्हेंट डेकोरेशन येथे
 ताजे आणि आकर्षक फुले, पूजा सामग्री तसेच
 विविध प्रकारच्या कार्यक्रमांसाठी Decoration Services
 उपलब्ध आहेत.
-
 </p>
 
-
 <p>
-
 लग्न समारंभ, वाढदिवस, हळदी समारंभ,
 गणपती उत्सव, गौरी पूजन, Stage Decoration,
 Balloon Decoration आणि Flower Decoration
 यांसाठी आमच्याशी संपर्क साधू शकता.
-
 </p>
 
 </div>
@@ -1093,20 +656,13 @@ Balloon Decoration आणि Flower Decoration
 </section>
 
 
+<!-- MAIN SERVICES -->
 
-<!-- =========================
-     MAIN SERVICES
-========================= -->
-
-<section
-id="services"
-class="services-section">
+<section id="services" class="services-section">
 
 <div class="section-title">
 
-<h2>
-🎉 आमच्या Decoration Services
-</h2>
+<h2>🎉 आमच्या Decoration Services</h2>
 
 <p>
 खालील सेवांवर क्लिक करून संबंधित स्वतंत्र पेज पाहा
@@ -1114,174 +670,111 @@ class="services-section">
 
 </div>
 
-
 <div class="service-grid">
 
 
 <!-- BALLOON -->
 
-<div
-class="service-card"
-onclick="window.location.href='baloon decoration.html'">
+<div class="service-card"
+onclick="window.location.href='baloon%20decoration.html'">
 
-<div class="service-icon">
-🎈
-</div>
+<div class="service-icon">🎈</div>
 
-<h3>
-Balloon Decoration
-</h3>
+<h3>Balloon Decoration</h3>
 
 <p>
 Birthday आणि Events साठी आकर्षक Balloon Decoration
 </p>
 
-<button>
-View Details →
-</button>
+<button type="button">View Details →</button>
 
 </div>
-
 
 
 <!-- WEDDING -->
 
-<div
-class="service-card"
+<div class="service-card"
 onclick="window.location.href='wedding.html'">
 
-<div class="service-icon">
-💍
-</div>
+<div class="service-icon">💍</div>
 
-<h3>
-Wedding Decoration
-</h3>
+<h3>Wedding Decoration</h3>
 
 <p>
 लग्नासाठी आकर्षक आणि सुंदर Decoration
 </p>
 
-<button>
-View Details
-</button>
+<button type="button">View Details →</button>
 
 </div>
 
 
+<!-- FLOWER HAR -->
 
-<!-- HAR -->
-
-
-<!-- HAR -->
 <div class="service-card"
-     onclick="window.location.href='har.html'">
+onclick="window.location.href='har.html'">
 
-    <div class="service-icon">
-        🌸
-    </div>
+<div class="service-icon">🌸</div>
 
-    <h3>FLOWER MALA/HAR</h3>
+<h3>FLOWER MALA / HAR</h3>
 
-    <p>नवरी नवऱ्याचे व सत्काराचे आकर्षक हार</p>
+<p>
+नवरी नवऱ्याचे व सत्काराचे आकर्षक हार
+</p>
 
-    <button type="button">हाराचे फोटो पहा</button>
+<button type="button">हाराचे फोटो पहा →</button>
 
 </div>
 
 
+<!-- STAGE DECORATION -->
 
+<div class="service-card"
+onclick="window.location.href='stage%20decoration.html'">
 
-<!-- STAGE -->
+<div class="service-icon">🏛️</div>
 
-<div
-class="service-card">
-
-<div class="service-icon">
-🏛️
-</div>
-
-<h3>
-Stage Decoration
-</h3>
+<h3>Stage Decoration</h3>
 
 <p>
 विविध कार्यक्रमांसाठी आकर्षक Stage Decoration
 </p>
 
-<button>
-Coming Soon
-</button>
+<button type="button">View Photos →</button>
 
 </div>
 
 
+<!-- MANDAP DECORATION -->
 
-<!-- FLOWER -->
+<div class="service-card"
+onclick="window.location.href='mandap%20decoration.html'">
 
-<div
-class="service-card">
+<div class="service-icon">🎊</div>
 
-<div class="service-icon">
-🌸
-</div>
-
-<h3>
-Flower Decoration
-</h3>
+<h3>Mandap Decoration</h3>
 
 <p>
-Fresh Flowers वापरून सुंदर आणि आकर्षक सजावट
+लग्न व धार्मिक कार्यक्रमांसाठी आकर्षक Mandap Decoration
 </p>
 
-<button>
-Coming Soon
-</button>
+<button type="button">View Photos →</button>
 
 </div>
 
-
-
-<!-- MANDAP -->
-
-<div
-class="service-card">
-
-<div class="service-icon">
-🎊
-</div>
-
-<h3>
-Mandap Decoration
-</h3>
-
-<p>
-लग्न व धार्मिक कार्यक्रमांसाठी Mandap Decoration
-</p>
-
-<button>
-Coming Soon
-</button>
-
-</div>
 
 </div>
 
 </section>
 
 
-
-<!-- =========================
-     OTHER SERVICES
-========================= -->
+<!-- OTHER SERVICES -->
 
 <section class="other-services">
 
 <div class="section-title">
 
-<h2>
-🪔 आमच्या इतर सेवा
-</h2>
+<h2>🪔 आमच्या इतर सेवा</h2>
 
 <p>
 Decoration सोबत उपलब्ध असलेल्या इतर सेवा
@@ -1289,19 +782,13 @@ Decoration सोबत उपलब्ध असलेल्या इतर �
 
 </div>
 
-
 <div class="other-grid">
-
 
 <div class="other-card">
 
-<div class="icon">
-🌹
-</div>
+<div class="icon">🌹</div>
 
-<h3>
-Fresh Flowers
-</h3>
+<h3>Fresh Flowers</h3>
 
 <p>
 विविध प्रकारची ताजी आणि सुंदर फुले उपलब्ध.
@@ -1309,17 +796,11 @@ Fresh Flowers
 
 </div>
 
-
-
 <div class="other-card">
 
-<div class="icon">
-🪔
-</div>
+<div class="icon">🪔</div>
 
-<h3>
-Pooja Material
-</h3>
+<h3>Pooja Material</h3>
 
 <p>
 विविध पूजांसाठी आवश्यक पूजा सामग्री.
@@ -1327,17 +808,11 @@ Pooja Material
 
 </div>
 
-
-
 <div class="other-card">
 
-<div class="icon">
-💐
-</div>
+<div class="icon">💐</div>
 
-<h3>
-Flower Garland
-</h3>
+<h3>Flower Garland</h3>
 
 <p>
 विविध कार्यक्रमांसाठी आकर्षक फुलांचे हार.
@@ -1345,17 +820,11 @@ Flower Garland
 
 </div>
 
-
-
 <div class="other-card">
 
-<div class="icon">
-🎉
-</div>
+<div class="icon">🎉</div>
 
-<h3>
-Event Decoration
-</h3>
+<h3>Event Decoration</h3>
 
 <p>
 विविध कार्यक्रमांसाठी विशेष Decoration Services.
@@ -1368,92 +837,55 @@ Event Decoration
 </section>
 
 
-
-<!-- =========================
-     WHY US
-========================= -->
+<!-- WHY US -->
 
 <section class="why-us">
 
 <div class="section-title">
 
-<h2>
-⭐ आम्हाला का निवडावे?
-</h2>
+<h2>⭐ आम्हाला का निवडावे?</h2>
 
 </div>
-
 
 <div class="why-grid">
 
-
 <div class="why-card">
 
-<span>
-🌸
-</span>
+<span>🌸</span>
 
-<h3>
-Fresh Flowers
-</h3>
+<h3>Fresh Flowers</h3>
 
-<p>
-ताजी आणि आकर्षक फुले
-</p>
+<p>ताजी आणि आकर्षक फुले</p>
 
 </div>
 
-
-
 <div class="why-card">
 
-<span>
-🎨
-</span>
+<span>🎨</span>
 
-<h3>
-Creative Decoration
-</h3>
+<h3>Creative Decoration</h3>
 
-<p>
-आकर्षक आणि सुंदर Decoration Design
-</p>
+<p>आकर्षक आणि सुंदर Decoration Design</p>
 
 </div>
 
-
-
 <div class="why-card">
 
-<span>
-🤝
-</span>
+<span>🤝</span>
 
-<h3>
-Reliable Service
-</h3>
+<h3>Reliable Service</h3>
 
-<p>
-कार्यक्रमानुसार योग्य सेवा
-</p>
+<p>कार्यक्रमानुसार योग्य सेवा</p>
 
 </div>
 
-
-
 <div class="why-card">
 
-<span>
-📞
-</span>
+<span>📞</span>
 
-<h3>
-Easy Contact
-</h3>
+<h3>Easy Contact</h3>
 
-<p>
-Call आणि WhatsApp वर थेट संपर्क
-</p>
+<p>Call आणि WhatsApp वर थेट संपर्क</p>
 
 </div>
 
@@ -1462,27 +894,17 @@ Call आणि WhatsApp वर थेट संपर्क
 </section>
 
 
+<!-- LOCATION -->
 
-<!-- =========================
-     LOCATION
-========================= -->
-
-<section
-id="location"
-class="location">
+<section id="location" class="location">
 
 <div class="section-title">
 
-<h2>
-📍 आमचे दुकान
-</h2>
+<h2>📍 आमचे दुकान</h2>
 
-<p>
-आमच्या दुकानाला भेट द्या
-</p>
+<p>आमच्या दुकानाला भेट द्या</p>
 
 </div>
-
 
 <div class="location-box">
 
@@ -1490,17 +912,11 @@ class="location">
 🌸 श्री जगदंबा फुल भंडार व इव्हेंट डेकोरेशन
 </h3>
 
-
 <p>
-
 📍 बीड बायपास रोड,<br>
-
 बाळापूर,<br>
-
 छत्रपती संभाजीनगर, महाराष्ट्र
-
 </p>
-
 
 <a
 class="map-btn"
@@ -1516,41 +932,26 @@ href="https://www.google.com/maps/search/?api=1&query=Shri+Jagadamba+Flower+Bhan
 </section>
 
 
+<!-- CONTACT -->
 
-<!-- =========================
-     CONTACT
-========================= -->
+<section id="contact" class="contact-section">
 
-<section
-id="contact"
-class="contact-section">
-
-<h2>
-📞 आमच्याशी संपर्क करा
-</h2>
-
+<h2>📞 आमच्याशी संपर्क करा</h2>
 
 <p>
 Decoration किंवा पूजा सामग्रीसाठी आजच संपर्क करा
 </p>
 
-
-<!-- CALL + WHATSAPP -->
-
 <div class="contact-buttons">
 
-
-<a
-class="contact-btn call-btn"
+<a class="contact-btn call-btn"
 href="tel:8806298182">
 
 📞 8806298182
 
 </a>
 
-
-<a
-class="contact-btn whatsapp-btn"
+<a class="contact-btn whatsapp-btn"
 target="_blank"
 href="https://wa.me/918806298182">
 
@@ -1561,10 +962,7 @@ href="https://wa.me/918806298182">
 </div>
 
 
-
-<!-- =========================
-     SOCIAL MEDIA
-========================= -->
+<!-- SOCIAL MEDIA -->
 
 <div class="social-section">
 
@@ -1572,58 +970,46 @@ href="https://wa.me/918806298182">
 🌐 आमच्याशी Social Media वर Connect व्हा
 </h3>
 
-
 <div class="social-buttons">
 
 
-<!-- =========================
-     INSTAGRAM 1
-========================= -->
+<!-- INSTAGRAM 1 -->
 
 <a
 class="social-btn instagram-btn"
 href="https://www.instagram.com/shri_jagdamba_flower_8182?stkn=MXRobWkyamExNjE5Mw=="
 target="_blank">
 
-📸 OFFICAL ID SHOP
+📸 OFFICIAL ID SHOP
 
 </a>
 
 
-
-<!-- =========================
-     INSTAGRAM 2
-========================= -->
+<!-- INSTAGRAM 2 -->
 
 <a
 class="social-btn instagram-btn"
 href="https://www.instagram.com/raju_chavhan8182?stkn=OXZhcXd1MWk1dnoz"
 target="_blank">
 
-📸 ONER ID
+📸 OWNER ID
 
 </a>
 
 
-
-<!-- =========================
-     INSTAGRAM 3
-========================= -->
+<!-- INSTAGRAM 3 -->
 
 <a
 class="social-btn instagram-btn"
 href="https://www.instagram.com/sunil_chavhan_8182?stkn=MTdmOWhqZ3l3dmdoZw=="
 target="_blank">
 
-📸 ONER ID
+📸 OWNER ID
 
 </a>
 
 
-
-<!-- =========================
-     FACEBOOK 1
-========================= -->
+<!-- FACEBOOK 1 -->
 
 <a
 class="social-btn facebook-btn"
@@ -1635,10 +1021,7 @@ target="_blank">
 </a>
 
 
-
-<!-- =========================
-     FACEBOOK 2
-========================= -->
+<!-- FACEBOOK 2 -->
 
 <a
 class="social-btn facebook-btn"
@@ -1650,10 +1033,7 @@ target="_blank">
 </a>
 
 
-
-<!-- =========================
-     FACEBOOK 3
-========================= -->
+<!-- FACEBOOK 3 -->
 
 <a
 class="social-btn facebook-btn"
@@ -1665,19 +1045,15 @@ target="_blank">
 </a>
 
 
-
-<!-- =========================
-     EMAIL
-========================= -->
+<!-- EMAIL -->
 
 <a
 class="social-btn email-btn"
-href="mailto:YOUR_EMAILcsunil8182@gmail.com">
+href="mailto:csunil8182@gmail.com">
 
 ✉️ Email करा
 
 </a>
-
 
 </div>
 
@@ -1686,10 +1062,7 @@ href="mailto:YOUR_EMAILcsunil8182@gmail.com">
 </section>
 
 
-
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1697,26 +1070,20 @@ href="mailto:YOUR_EMAILcsunil8182@gmail.com">
 🌸 श्री जगदंबा फुल भंडार व इव्हेंट डेकोरेशन
 </h3>
 
-
 <p>
 Fresh Flowers • पूजा सामग्री • Event Decoration
 </p>
-
 
 <p>
 📍 बीड बायपास रोड, बाळापूर,
 छत्रपती संभाजीनगर
 </p>
 
-
 <p>
-© 2026 Shri Jagadamba.
-All Rights Reserved.
+© 2022 Shri Jagadamba. All Rights Reserved.
 </p>
 
 </footer>
 
-
 </body>
-
 </html>
