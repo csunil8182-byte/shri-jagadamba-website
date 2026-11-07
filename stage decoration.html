@@ -1,0 +1,674 @@
+
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stage Decoration - श्री जगदंबा</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #faf7f2;
+    color: #333;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(120deg, #650000, #a66b08);
+    color: white;
+    padding: 18px 5%;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h2 {
+    color: #ffe0a0;
+    font-size: 27px;
+}
+
+header p {
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 22px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 300px;
+    background:
+    linear-gradient(#30000099, #30000099),
+    url("stage decoration1.jpg") center/cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 15px;
+    color: white;
+}
+
+.hero h1 {
+    color: #ffdf9b;
+    font-size: clamp(32px, 5vw, 50px);
+}
+
+.hero p {
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.hero button {
+    margin-top: 25px;
+    padding: 14px 30px;
+    background: #d5a64b;
+    border: none;
+    border-radius: 30px;
+    color: #430000;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* HEADING */
+
+.heading {
+    text-align: center;
+    padding: 45px 15px 30px;
+}
+
+.heading h2 {
+    color: #760808;
+    font-size: 30px;
+}
+
+.heading p {
+    color: #777;
+    margin-top: 15px;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.line {
+    width: 100px;
+    height: 4px;
+    background: #d5a64b;
+    margin: 18px auto;
+}
+
+/* GALLERY */
+
+.container {
+    max-width: 1350px;
+    margin: auto;
+    padding: 15px 20px 55px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #00000015;
+}
+
+.photo {
+    width: 100%;
+    height: 350px;
+    background: #eee;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #eee;
+    transition: transform .3s;
+}
+
+.photo:hover img {
+    transform: scale(1.03);
+}
+
+.info {
+    padding: 18px;
+}
+
+.info h3 {
+    color: #760808;
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.order {
+    display: block;
+    text-align: center;
+    background: #168b4b;
+    color: white;
+    padding: 14px 8px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.order:hover {
+    background: #086b35;
+}
+
+/* ABOUT */
+
+.about {
+    background: white;
+    padding: 55px 20px;
+    text-align: center;
+}
+
+.about h2,
+.contact h2 {
+    color: #760808;
+    font-size: 28px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.9;
+    color: #666;
+    font-size: 16px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: linear-gradient(120deg, #570000, #8c1111);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.contact h2 {
+    color: #ffdf9b;
+}
+
+.contact p {
+    margin-top: 12px;
+}
+
+.contact a {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 14px 30px;
+    background: #168b4b;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    background: #260202;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    line-height: 2;
+}
+
+/* FULL SCREEN VIEWER */
+
+.viewer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.97);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.viewer img {
+    max-width: 96%;
+    max-height: 78vh;
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    top: 12px;
+    right: 25px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+    color: white;
+}
+
+.controls button {
+    background: #d5a64b;
+    color: #430000;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 22px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* TABLET */
+
+@media(max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .photo {
+        height: 320px;
+    }
+}
+
+/* MOBILE */
+
+@media(max-width: 600px) {
+
+    header {
+        padding: 17px 10px;
+    }
+
+    header h2 {
+        font-size: 24px;
+    }
+
+    nav {
+        gap: 17px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 260px;
+    }
+
+    .heading h2 {
+        font-size: 25px;
+    }
+
+    .heading p {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 10px 13px 40px;
+    }
+
+    /* MOBILE: ONE LARGE PHOTO PER ROW */
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .photo {
+        height: 360px;
+    }
+
+    .info {
+        padding: 17px;
+    }
+
+    .info h3 {
+        font-size: 20px;
+    }
+
+    .order {
+        font-size: 15px;
+        padding: 15px;
+    }
+}
+
+@media(max-width: 380px) {
+    .photo {
+        height: 300px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <h2>श्री जगदंबा</h2>
+
+    <p>फुल भंडार व इव्हेंट डेकोरेशन</p>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div>
+
+        <h1>Stage Decoration</h1>
+
+        <p>
+            प्रत्येक सोहळा बनवा खास!<br>
+            सुंदर आणि आकर्षक स्टेज डेकोरेशन.
+        </p>
+
+        <button onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">
+            Explore Gallery
+        </button>
+
+    </div>
+
+</section>
+
+<!-- GALLERY HEADING -->
+
+<section class="heading" id="gallery">
+
+    <h2>आमचे Stage Decoration</h2>
+
+    <div class="line"></div>
+
+    <p>
+        आमच्या स्टेज डेकोरेशनचे फोटो पहा.<br>
+        आवडलेला फोटो निवडा आणि WhatsApp वर ऑर्डर करा.
+    </p>
+
+</section>
+
+<!-- PHOTO GALLERY -->
+
+<div class="container">
+
+    <div class="gallery" id="galleryBox"></div>
+
+</div>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <h2>आमच्याबद्दल</h2>
+
+    <div class="line"></div>
+
+    <p>
+        श्री जगदंबा फुल भंडार व इव्हेंट डेकोरेशन येथे
+        लग्न समारंभ, स्टेज डेकोरेशन आणि विविध कार्यक्रमांसाठी
+        आकर्षक सजावटीची सेवा उपलब्ध आहे.
+
+        तुमच्या खास क्षणांना सुंदर बनवणे हेच आमचे ध्येय आहे.
+    </p>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2>तुमच्या कार्यक्रमासाठी बुकिंग करा</h2>
+
+    <p>अधिक माहितीसाठी WhatsApp वर संपर्क साधा.</p>
+
+    <a id="contactWhatsApp" href="#" target="_blank">
+        WhatsApp Contact
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>श्री जगदंबा फुल भंडार</h3>
+
+    <p>फुल भंडार व इव्हेंट डेकोरेशन</p>
+
+    <p>छत्रपती संभाजीनगर</p>
+
+    <p>© 2026 Shri Jagadamba Flower & Event Decoration</p>
+
+</footer>
+
+<!-- FULL SCREEN PHOTO -->
+
+<div class="viewer" id="viewer">
+
+    <span class="close" onclick="closeViewer()">×</span>
+
+    <img id="bigImage" src="" alt="Stage Decoration">
+
+    <div class="controls">
+
+        <button onclick="changePhoto(-1)">❮</button>
+
+        <span id="photoCount"></span>
+
+        <button onclick="changePhoto(1)">❯</button>
+
+    </div>
+
+</div>
+
+<script>
+
+/* WHATSAPP NUMBER */
+
+const whatsappNumber = "91XXXXXXXXXX";
+
+
+/* EXACT PHOTO NAMES AND EXTENSIONS */
+
+const photos = [
+
+    "stage decoration1.jpg",
+    "stage decoration2.jpg",
+    "stage decoration3.jpg",
+    "stage decoration4.jpg",
+    "stage decoration5.webp",
+    "stage decoration6.jpg",
+    "stage decoration7.jpg",
+    "stage decoration8.jpg",
+    "stage decoration9.jpg",
+    "stage decoration10.jpg",
+    "stage decoration11.jpg",
+    "stage decoration12.jpg",
+    "stage decoration13.jpg",
+    "stage decoration14.jpg",
+    "stage decoration15.jpg"
+
+];
+
+
+/* GENERATE PHOTO GALLERY */
+
+const gallery = document.getElementById("galleryBox");
+
+photos.forEach((photo, index) => {
+
+    const number = index + 1;
+
+    const card = document.createElement("div");
+
+    card.className = "card";
+
+    card.innerHTML = `
+
+        <div class="photo" onclick="openViewer(${index})">
+
+            <img
+                src="${encodeURI(photo)}"
+                alt="Stage Decoration ${number}"
+                loading="lazy"
+            >
+
+        </div>
+
+        <div class="info">
+
+            <h3>Stage Decoration ${number}</h3>
+
+            <a class="order"
+               href="https://wa.me/${whatsappNumber}?text=${encodeURIComponent('नमस्कार, मला Stage Decoration ' + number + ' ऑर्डर करायचे आहे. कृपया माहिती द्या.')}"
+               target="_blank">
+
+               WhatsApp वर ऑर्डर करा
+
+            </a>
+
+        </div>
+
+    `;
+
+    gallery.appendChild(card);
+
+});
+
+
+/* CONTACT WHATSAPP */
+
+document.getElementById("contactWhatsApp").href =
+    "https://wa.me/" + whatsappNumber;
+
+
+/* FULL SCREEN VIEWER */
+
+let current = 0;
+
+function openViewer(index) {
+
+    current = index;
+
+    showPhoto();
+
+    document.getElementById("viewer").style.display = "flex";
+
+}
+
+function showPhoto() {
+
+    document.getElementById("bigImage").src =
+        encodeURI(photos[current]);
+
+    document.getElementById("photoCount").innerText =
+        (current + 1) + " / " + photos.length;
+
+}
+
+function changePhoto(direction) {
+
+    current += direction;
+
+    if(current >= photos.length) {
+        current = 0;
+    }
+
+    if(current < 0) {
+        current = photos.length - 1;
+    }
+
+    showPhoto();
+
+}
+
+function closeViewer() {
+
+    document.getElementById("viewer").style.display = "none";
+
+}
+
+
+/* KEYBOARD CONTROLS */
+
+document.addEventListener("keydown", function(event) {
+
+    if(event.key === "Escape") {
+        closeViewer();
+    }
+
+    if(event.key === "ArrowRight") {
+        changePhoto(1);
+    }
+
+    if(event.key === "ArrowLeft") {
+        changePhoto(-1);
+    }
+
+});
+
+
+/* CLOSE ON BACKGROUND CLICK */
+
+document.getElementById("viewer").addEventListener("click", function(event) {
+
+    if(event.target === this) {
+        closeViewer();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
